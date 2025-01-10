@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #111;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: #ff1414;
+  }
+  
+  .nav-links  .open{
+    color: rgb(142, 142, 255);
+  }
+
+ /* About Us Section */
+.about-us {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styling */
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff9f00;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Paragraph Styling */
+.about-us p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+/* Emphasis on important text */
+.about-us p strong {
+  font-weight: bold;
+  color: #ff9f00;
+}
+
+/* Container for additional content */
+.about-us-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Button Style */
+.about-us .cta-btn {
+  background-color: #ff9f00;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.about-us .cta-btn:hover {
+  background-color: #e68900;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .about-us {
+      padding: 2rem 1rem;
+  }
+
+  .about-us h2 {
+      font-size: 2rem;
+  }
+
+  .about-us p {
+      font-size: 1rem;
+  }
+
+  .about-us .cta-btn {
+      padding: 8px 16px;
+  }
+}
+
+h3{
+  text-align: left;
+  margin-left: 6vw;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta-box {
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+.nav-links .open {
+  color: rgb(142, 142, 255);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: none; /* Initially hidden */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Slide in from the left */
+    display: block;
+  }
+}
+
+
+/* General sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 0; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111; /* Dark background */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s; /* Smooth toggle transition */
+  padding-top: 60px;
+  z-index: 1000;
+  display: none; /* Hide by default */
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+  list-style: none;
+  cursor: pointer; /* Indicates it's clickable */
+  border-bottom: 1px solid #575757; /* Separate each option */
+}
+
+.sidebar a.open {
+  color: rgb(171, 171, 224); /* Blue color for active tab */
+  font-weight: bold; /* Make the text bold (optional) */
+  background-color: #222; /* Slightly darker background (optional) */
+  border-left: 4px solid rgb(108, 108, 138); /* Add a blue border (optional) */
+}
+
+.sidebar a:hover {
+  background-color: #574242;
+  border-left: 4px solid rgb(255, 180, 200);
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; /* Hide by default */
+}
+
+.nav-option{
+  list-style: none;
+  /* display: flex; */
+  gap: 20px;
+}
+
+
+/* Sidebar for small screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar.open {
+    width: 75%; /* Adjust width for small screens */
+  }
+
+  .sidebar-toggle {
+    display: block; /* Show toggle button on smaller screens */
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Workshops</title>
+    <link rel="stylesheet" href="nearby_workshop.css">
+    <link rel="shortcut icon" href="/Retro/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="navbar">
+            <div class="logo">Retro</div>
+
+            <div class="sidebar" id="mySidebar">
+                <ul class="nav-option">
+                    <li><a href="/Retro/Index/Index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html"><i class="fa fa-cogs"></i>
+                            Retrofitting
+                            Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html" class="open"><i
+                                class="fa fa-map-marker-alt"></i> Nearby
+                            Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html"><i class="fa fa-info-circle"></i> About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/Retro/Index/Index.html">Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html">Retrofitting Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html" class="open">Nearby Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html">About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Nearby Workshops</h2>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-workshops" placeholder="Search for a workshop..."
+                    onkeyup="filterWorkshops()">
+            </div>
+
+            <!-- Workshop List -->
+            <ul id="workshops-list">
+                <li>
+                    <div class="starya">
+                        <div class="about"><a href="https://www.starya.in/">STARYA MOBILITY PRIVATE LIMITED</a></div>
+                        <div class="address">10th Main, Near Ram Mandir, Opp. to Canara Bank, 4th Block, Rajajinagar,
+                            Bengaluru - 10
+                        </div>
+                        <div class="contact">Contact: +91 98765 43210</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="loop-moto">
+                        <div class="about"><a href="https://www.loopmoto.com/">Loop Moto</a></div>
+                        <div class="address">123 Green Street, Electronics City, Bengaluru - 560100</div>
+                        <div class="contact">Contact: +91 87654 32109</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="doreal-motors">
+                        <div class="about"><a href="https://www.dorealmotors.com/">doReal Motors</a></div>
+                        <div class="address">45 Prime Road, Whitefield, Bengaluru - 560066</div>
+                        <div class="contact">Contact: +91 99887 66554</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gogreen-bov">
+                        <div class="about"><a href="https://www.gogreenbov.com/">GoGreenBOV</a></div>
+                        <div class="address">89 Eco Park, MG Road, Bengaluru - 560001</div>
+                        <div class="contact">Contact: +91 88990 11223</div>
+                    </div>
+                </li>
+                <!-- <li>
+                <div class="ev-point">
+                    <div class="about"><a href="https://www.evpoint.com/">EV Point</a></div>
+                    <div class="address">99 Energy Avenue, Yelahanka, Bengaluru - 560064</div>
+                    <div class="contact">Contact: +91 77665 44332</div>
+                </div>
+            </li> -->
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to filter workshops
+        function filterWorkshops() {
+            const input = document.getElementById('search-workshops').value.toLowerCase();
+            const workshops = document.querySelectorAll('#workshops-list li');
+
+            workshops.forEach(workshop => {
+                const content = workshop.textContent.toLowerCase();
+                if (content.includes(input)) {
+                    workshop.style.display = 'block';
+                } else {
+                    workshop.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+
+            // Toggle the sidebar
+            if (sidebar.classList.contains("open")) {
+                sidebar.classList.remove("open");
+            } else {
+                sidebar.classList.add("open");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

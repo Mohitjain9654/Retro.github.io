@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start retrofitting Process</title>
+    <link rel="stylesheet" href="start_retrofitting.css">
+    <link rel="shortcut icon" href="/Retro/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div>
+        <header class="navbar">
+            <div class="logo">Retro</div>
+
+            <div class="sidebar" id="mySidebar">
+                <ul class="nav-option">
+                    <li><a href="/Retro/Index/Index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html"><i class="fa fa-cogs"></i> Retrofitting
+                            Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html"><i class="fa fa-map-marker-alt"></i> Nearby
+                            Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html"><i class="fa fa-info-circle"></i> About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/Retro/Index/Index.html">Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html">Retrofitting Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html" class="open">Nearby Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html">About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <section id="retrofit-input-screen" class="hidden">
+                <h2>Retrofit Input</h2>
+                <form class="retrofit-form">
+                    <div class="form">
+                        <label for="vehicleType">Vehicle Type:</label>
+                        <select id="vehicleType">
+                            <option value="motorcycle">Motorcycle</option>
+                            <option value="scooter">Scooter</option>
+                        </select>
+
+                        <label for="bodyType">Body Type:</label>
+                        <select id="bodyType">
+                            <option value="cruiser">Cruiser</option>
+                            <option value="sport">Sport</option>
+                            <option value="touring">Touring</option>
+                        </select>
+
+                        <label for="engineType">Engine Type:</label>
+                        <select id="engineType">
+                            <option value="combustion">Internal Combustion</option>
+                            <option value="electric">Electric</option>
+                        </select>
+
+                        <label for="fuelEfficiency">Fuel Efficiency (km/l):</label>
+                        <input type="number" id="fuelEfficiency" placeholder="Enter fuel efficiency">
+
+                        <label for="brakingSystem">Braking System:</label>
+                        <select id="brakingSystem">
+                            <option value="drum">Drum</option>
+                            <option value="disc">Disc</option>
+                        </select>
+
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" placeholder="Enter weight">
+
+                        <label for="thickness">Material Thickness (mm):</label>
+                        <input type="number" id="thickness" placeholder="Enter thickness">
+
+                        <label for="tyreLife">Tyre Life (Percentage or km left):</label>
+                        <input type="number" id="tyreLife" placeholder="Enter tyre life left">
+
+                        <label for="vehicleLife">Vehicle Life (years used):</label>
+                        <input type="number" id="vehicleLife" placeholder="Enter vehicle life used">
+
+                        <label for="bodyCondition">Body Condition:</label>
+                        <select id="bodyCondition">
+                            <option value="good">Good</option>
+                            <option value="average">Average</option>
+                            <option value="bad">Bad</option>
+                            <option value="worse">Worse</option>
+                        </select>
+
+                        <label for="rustLevel">Rust Level:</label>
+                        <select id="rustLevel">
+                            <option value="none">None</option>
+                            <option value="light">Light</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="severe">Severe</option>
+                        </select>
+
+                        <label for="electricalSystem">Electrical System Status:</label>
+                        <select id="electricalSystem">
+                            <option value="functional">Functional</option>
+                            <option value="minorIssues">Minor Issues</option>
+                            <option value="nonFunctional">Non-Functional</option>
+                        </select>
+
+                        <button type="button" onclick="submitRetrofit()">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div class="result">
+        <section id="results-screen" style="display:none;" class="hidden">
+            <h2>Retrofit Recommendations</h2>
+            <ul id="recommendations-list"></ul>
+            <button onclick="showRetrofitInput()">Back to Input</button>
+        </section>
+    </div>
+
+    <script src="start_retrofitting.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about_us.css">
+    <link rel="shortcut icon" href="/Retro/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="navbar">
+            <div class="logo">Retro</div>
+            <div class="sidebar" id="mySidebar">
+                <ul class="nav-option">
+                    <li><a href="/Retro/Index/Index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html"><i class="fa fa-cogs"></i> Retrofitting
+                            Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html"><i class="fa fa-map-marker-alt"></i> Nearby
+                            Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html"  class="open"><i class="fa fa-info-circle"></i> About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/Retro/Index/Index.html">Home</a></li>
+                    <li><a href="/Retro/Retrofitting_Process/Retrofitting_Process.html">Retrofitting Process</a></li>
+                    <li><a href="/Retro/Nearby_Workshop/Nearby_Workshop.html">Nearby Workshop</a></li>
+                    <li><a href="/Retro/About_Us/About_Us.html" class="open">About Us</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="about-us">
+            <div class="about-us-container">
+                <h2>About Us</h2>
+                <h3>Who we are</h3>
+                <p>
+                    Welcome to our project! We are second Year computer Science students, working on an college project,
+                    Our aim
+                    is to find solution for easy installation and cost effective for retrofitting ICE Vehicle to
+                    Electric vehicle.
+                </p>
+                <h3>Our Goal</h3>
+                <p>
+                    Our Goal is to achieve retrofitting process affordable, and environmentally impactful. Our Aim is to
+                    contribute to a clenaner Planet by reducing Carbon Emission by providing user friendly solution.
+                </p>
+                <h3>What we do</h3>
+                <p>
+                    Our Platform assessing vehicle conditions to recommending necessary upgrades, we provide step by
+                    step guidance
+                    to convert ICE vehicle to electric vehicle.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+  
+    // Toggle the sidebar
+    if (sidebar.classList.contains("open")) {
+      sidebar.classList.remove("open");
+    } else {
+      sidebar.classList.add("open");
+    }
+  }
+    </script>
+
+
+</body>
+
+</html>
